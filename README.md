@@ -1,6 +1,5 @@
-# hello
 
-> A Vue.js project
+> 荔知-深大信息汇总
 
 ## Build Setup
 
