@@ -29,7 +29,7 @@
                 </template>
                 <template v-else>
                 </template> -->
-                <td v-for="item in table.minRank">{{item == 0 ? '-' : (item * 1000)}}</td>
+                <td v-for="item in table.minRank">{{(item == 0 || item == null) ? '-' : (item * 1000)}}</td>
               </tr>
               <tr>
                 <td>控制线</td>
@@ -193,7 +193,7 @@
               data: [],
             },
             {
-              name: '超出控制线',
+              name: '均控差',
               type: 'line',
               data: [],
             },
@@ -290,6 +290,7 @@
           series[4].data.push(Number(item.recruit_num));
 
           if (this.province == '广东') series[5].data.push(Number(item.min_rank) / 1000);
+          else series[5].data.push(null);
         }
         return option;
       },
