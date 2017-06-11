@@ -1,0 +1,7 @@
+build/*.js
+config/*.js
+*.vue
+src/main.js
+src/httpApi.js
+src/store.js
+src/routes.js
